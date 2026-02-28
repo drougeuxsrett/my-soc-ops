@@ -16,8 +16,11 @@
       ]
     }
   },
-  "postCreateCommand": "npm install",
-  "forwardPorts": [5173],
+  // "postCreateCommand": "npm install",
+  "postCreateCommand": "sudo mkdir -p /workspaces/my-soc-ops.worktrees && sudo chown node:node /workspaces/my-soc-ops.worktrees && npm install",
+  "forwardPorts": [
+    5173
+  ],
   "portsAttributes": {
     "5173": {
       "label": "Vite Dev Server",
