@@ -30,3 +30,6 @@ No `tailwind.config.js` — tokens live in `src/index.css` via `@theme`: `--colo
 - Named exports everywhere (only `App` uses default export)
 - Props interfaces defined inline above each component, not in `types/index.ts`
 - Tests co-located in `src/utils/` next to the logic they test
+
+### Git Worktree Isolation
+When creating worktrees, always use `./.worktrees/` (inside the project) and the `--relative-paths` flag to avoid permission errors in Dev Containers.
