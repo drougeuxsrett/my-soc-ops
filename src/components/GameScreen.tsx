@@ -17,28 +17,52 @@ export function GameScreen({
   onReset,
 }: GameScreenProps) {
   return (
-    <div className="flex flex-col min-h-full bg-gray-50">
-      {/* Header */}
-      <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200">
+    <div className="flex flex-col min-h-full">
+      {/* Header — espresso bar */}
+      <header
+        className="flex items-center justify-between px-4 py-3"
+        style={{
+          background: 'linear-gradient(160deg, #4a2c1a 0%, #2c1810 100%)',
+          boxShadow: '0 2px 12px oklch(0.2 0.08 45 / 0.35)',
+        }}
+      >
         <button
           onClick={onReset}
-          className="text-gray-500 text-sm px-3 py-1.5 rounded active:bg-gray-100"
+          className="text-latte text-sm italic py-1 active:text-cream transition-colors"
+          style={{ fontFamily: "'Crimson Pro', Georgia, serif" }}
         >
-          ← Back
+          ← Leave
         </button>
-        <h1 className="font-bold text-gray-900">Soc Ops</h1>
-        <div className="w-16"></div>
+        <h1
+          className="font-black text-cream text-xl tracking-wide"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+        >
+          Soc Ops
+        </h1>
+        <div className="w-14" />
       </header>
 
       {/* Instructions */}
-      <p className="text-center text-gray-500 text-sm py-2 px-4">
-        Tap a square when you find someone who matches it.
+      <p
+        className="text-center text-mocha text-sm py-2 px-4 italic"
+        style={{ fontFamily: "'Crimson Pro', Georgia, serif" }}
+      >
+        Find someone who matches each square and tap it.
       </p>
 
-      {/* Bingo indicator */}
+      {/* Bingo banner */}
       {hasBingo && (
-        <div className="bg-amber-100 text-amber-800 text-center py-2 font-semibold text-sm">
-          🎉 BINGO! You got a line!
+        <div
+          className="text-center py-2 font-bold text-sm tracking-wide"
+          style={{
+            fontFamily: "'Playfair Display', Georgia, serif",
+            background: 'linear-gradient(90deg, #f0e2c0, #faf3e4, #f0e2c0)',
+            color: '#2c1810',
+            borderTop: '1px solid #d4a96a',
+            borderBottom: '1px solid #d4a96a',
+          }}
+        >
+          ☕ BINGO! You got a line!
         </div>
       )}
 
