@@ -71,6 +71,10 @@ body {
   animation-delay: 0.4s;
 }
 
+.anim-delay-4 {
+  animation-delay: 0.55s;
+}
+
 /* Coffee ring stamp on marked squares */
 @keyframes stampIn {
   from {
